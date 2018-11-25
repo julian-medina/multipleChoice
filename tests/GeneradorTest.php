@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class GeneradorTests extends TestCase 
 {
-    public function generarArchivoTests(){
+    public function testGenerarArchivo(){
         $archivo='/preguntas.yml';
         $diezpreg='/diezpreguntas.yml';
         $ejemplo=new Generador($archivo);
