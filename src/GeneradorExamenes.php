@@ -1,3 +1,4 @@
+<?php
 
 class Generador {
     protected $listaPreguntas;
