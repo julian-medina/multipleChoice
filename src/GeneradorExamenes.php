@@ -2,7 +2,7 @@
 
 namespace multipleChoice;
 use Symfony\Component\Yaml\Yaml;
-class Generador {
+class Generador{
     protected $listaPreguntas;
     public function __construct($archivo){
         $pregs_text = Yaml::parseFile($archivo);;
