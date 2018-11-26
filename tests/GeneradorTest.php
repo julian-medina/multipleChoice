@@ -7,8 +7,8 @@ use PHPUnit\Framework\TestCase;
 class GeneradorTests extends TestCase 
 {
     public function testGenerarArchivo(){
-        $archivo='/preguntas.yml';
-        $diezpreg='/diezpreguntas.yml';
+        $archivo='preguntas.yml';
+        $diezpreg='diezpreguntas.yml';
         $ejemplo=new Generador($archivo);
         $ejemplo2=new Generador($diezpreg);
         $this->assertTrue(isset($archivo));
