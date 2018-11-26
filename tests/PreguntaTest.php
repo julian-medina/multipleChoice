@@ -3,7 +3,7 @@
 namespace multipleChoice;
 
 use PHPUnit\Framework\TestCase;
-
+use Symfony\Component\Yaml\Yaml;
 class PreguntaTests extends TestCase 
 {
     public function testFunciones(){
