@@ -20,10 +20,7 @@ class PreguntaTests extends TestCase
         $this->assertEquals($preguntaarmada->getNumero(),1);
         $this->assertEquals($preguntaarmada->getCantRespuestas(),4);
         $this->assertNotEquals($preguntaarmada->getDescripcion(),FALSE);
-        $this->assertEquals($preguntaarmada->getRespCorrectas(),"'imagen.bmp'");
-        $this->assertEquals($preguntaarmada->getRespIncorrectas(),
-        "'imagen.jpg'
-        'imagen.gif'
-        'imagen.png'");
+        $this->assertNotEquals($preguntaarmada->getRespCorrectas(),FALSE);
+        $this->assertNotEquals($preguntaarmada->getRespIncorrectas(),FALSE);
     }
 }
