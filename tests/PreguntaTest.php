@@ -19,7 +19,7 @@ class PreguntaTests extends TestCase
         'imagen.png'");
         $this->assertEquals($preguntaarmada->getNumero(),1);
         $this->assertEquals($preguntaarmada->getCantRespuestas(),4);
-        $this->assertEquals($preguntaarmada->getDescripcion(),"¿Para una imagen de 500 x 500 pixeles con 180 colores diferentes guarado en distintos formatos, que archivo es el más espacio en disco ocupa?");
+        $this->assertNotEquals($preguntaarmada->getDescripcion(),FALSE);
         $this->assertEquals($preguntaarmada->getRespCorrectas(),"'imagen.bmp'");
         $this->assertEquals($preguntaarmada->getRespIncorrectas(),
         "'imagen.jpg'
