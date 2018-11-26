@@ -8,7 +8,7 @@ class Generador{
         $pregs_text = Yaml::parseFile($archivo);;
         $pregs = $pregs_text['preguntas'];
         shuffle($pregs);
-        for($i = 0; $i < 200; $i++){
+        for($i = 0; $i < $this->cantidadPreguntas(); $i++){
             $this->listaPreguntas[$i] = new Pregunta($pregs[$i], $i+1);
         }
     }
