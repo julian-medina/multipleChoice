@@ -10,7 +10,7 @@ class PreguntaTests extends TestCase
         $archivo='preguntas.yml';
         $preguntasyml = Yaml::parseFile($archivo);
         $preguntaarmada = new Pregunta ($preguntasyml['preguntas'][9],1);
-        $this->assertTrue(isset($pregunta));
+        $this->assertTrue(isset($preguntasyml));
         $this->assertTrue(isset($preguntaarmada));
         $this->assertNotEquals($preguntaarmada->getRespuestas(),
         "'imagen.bmp'
