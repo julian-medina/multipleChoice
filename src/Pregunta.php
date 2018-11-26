@@ -10,8 +10,8 @@ class Pregunta {
     protected $ocultar_opcion_todas_las_anteriores=false;
     protected $ocultar_opcion_ninguna_de_las_anteriores=false;
     protected $texto_ninguna_de_las_anteriores = "Ninguna de las anteriores";
-    protected $todaslasanteriores = false;
-    protected $ningunadelasanteriores = false;
+    protected $todas = false;
+    protected $ninguna = false;
 
     public function __construct($info, $num){
         $this->numero = $num;
