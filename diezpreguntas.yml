@@ -80,7 +80,7 @@ preguntas:
       - 'imagen.gif'
       - 'imagen.png'
     ocultar_opcion_todas_las_anteriores: true
-    ocultas_opcion_ninguna_de_las_anteriores: true
+    ocultar_opcion_ninguna_de_las_anteriores: true
 
   - descripcion: Los archivos del tipo GIF
     respuestas_correctas:
