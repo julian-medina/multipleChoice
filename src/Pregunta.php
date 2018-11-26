@@ -18,9 +18,15 @@ class Pregunta {
         $this->descripcion=$info["descripcion"];
         $this->respuestas_correctas = $info["respuestas_correctas"];
         $this->respuestas_incorrectas = $info["respuestas_incorrectas"];
-        $this->ocultar_opcion_todas_las_anteriores = $info["ocultar_opcion_todas_las_anteriores"];
-        $this->ocultar_opcion_ninguna_de_las_anteriores = $info["ocultar_opcion_ninguna_de_las_anteriores"];
-        $this->texto_ninguna_de_las_anteriores = $info["texto_ninguna_de_las_anteriores"];
+        if(isset($info["ocultar_opcion_todas_las_anteriores"])){
+            $this->ocultar_opcion_todas_las_anteriores = $info["ocultar_opcion_todas_las_anteriores"];
+        }
+        if(isset($info["ocultar_opcion_ninguna_de_las_anteriores"])){
+            $this->ocultar_opcion_ninguna_de_las_anteriores = $info["ocultar_opcion_ninguna_de_las_anteriores"];
+        }
+        if(isset($info["texto_ninguna_de_las_anteriores"])){
+            $this->texto_ninguna_de_las_anteriores = $info["texto_ninguna_de_las_anteriores"];
+        }
         if( count($this->respuestas_incorrectas) == 0) $this->todas = true;
         if( count($this->respuestas_correctas) == 0) $this->ninguna = true;
         $this->crearPackRepuestas();
