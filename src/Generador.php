@@ -5,7 +5,7 @@ use Symfony\Component\Yaml\Yaml;
 class Generador{
     protected $listaPreguntas;
     public function __construct($archivo){
-        $preguntasyml = Yaml::parseFile($archivo);;
+        $preguntasyml = Yaml::parseFile($archivo);
         $arraypreguntas = $preguntasyml['preguntas'];
         shuffle($arraypreguntas);
         for($i = 0; $i < sizeof($arraypreguntas); $i++){

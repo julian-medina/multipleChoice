@@ -7,16 +7,9 @@ use Symfony\Component\Yaml\Yaml;
 class PreguntaTests extends TestCase 
 {
     public function testFunciones(){
-        $pregunta = Yaml::parse("descripcion: ¿Para una imagen de 500 x 500 pixeles con 180 colores diferentes guarado en distintos formatos, que archivo es el más espacio en disco ocupa?
-        respuestas_correctas:
-          - 'imagen.bmp'
-        respuestas_incorrectas:
-          - 'imagen.jpg'
-          - 'imagen.gif'
-          - 'imagen.png'
-        ocultar_opcion_todas_las_anteriores: true
-        ocultar_opcion_ninguna_de_las_anteriores: true");
-        $preguntaarmada = new Pregunta ($pregunta,1);
+        $archivo='preguntas.yml';
+        $preguntasyml = Yaml::parseFile($archivo);
+        $preguntaarmada = new Pregunta ($preguntasyml['preguntas'][9],1);
         $this->assertTrue(isset($pregunta));
         $this->assertTrue(isset($preguntaarmada));
         $this->assertNotEquals($preguntaarmada->getRespuestas(),
