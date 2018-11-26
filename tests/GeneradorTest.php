@@ -19,5 +19,6 @@ class GeneradorTests extends TestCase
         $this->assertNotEquals(10,$ejemplo->cantidadPreguntas());
         $this->assertEquals(10,$ejemplo2->cantidadPreguntas());
         $this->assertNotEquals(25,$ejemplo2->cantidadPreguntas());
+        $this->assertNotEquals(FALSE,$ejemplo2->listaPreguntas());
     }
 }
